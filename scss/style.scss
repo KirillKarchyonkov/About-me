@@ -1,0 +1,99 @@
+@import "./reset.scss";
+
+body {
+    min-height: 100vh;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    
+}
+
+.aboutme {
+    display: grid;
+    grid-template: 1fr 3fr / 1fr 1fr;
+    gap: 10px;
+    min-height: 70vh;
+    &__photo {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 2;
+    }
+}
+
+.contacts {}
+
+.conteiner {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 1 auto;
+}
+
+.footer {
+    border: 2px solid black;
+    &__item {}
+
+    &__link {}
+}
+
+.header {
+    display: flex;
+    height: 70px;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: space-around;
+    &__burger {
+        display: none;
+    }
+
+    &__button {
+        border: 2px solid black;
+        width: 20px;
+        height: 20px;
+    }
+
+    &__list {
+        display: flex;
+        transition: all ease-in 0.1s;
+        & li {
+            margin: 0 20px 0;
+            text-transform: uppercase;
+            &:hover {
+                color: rgb(84, 82, 82);
+                transition: all ease-in 0.1s;
+            }
+        }
+    }
+
+    &__menu {
+        font-size: 20px;
+    }
+}
+
+.myprojects {}
+
+.myskills {}
+
+.wrapper {
+   
+}
+
+.grid {
+    border: 2px dashed black;
+}
+
+
+@media(max-width:680px) {
+    .aboutme {
+        grid-template: 1fr 3fr 4fr/ 1fr ;
+        &__photo {
+            grid-row-start: 3;
+            grid-row-end: 5;
+            grid-column-start: 1;
+        }
+    }
+}
