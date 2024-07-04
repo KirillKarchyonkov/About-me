@@ -80,10 +80,43 @@ body {
   gap: 10px;
   min-height: 70vh;
 }
+.aboutme__title {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutme__title span {
+  display: inline-block;
+  text-transform: uppercase;
+}
+.aboutme__text {
+  font-size: 50px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutme__text span {
+  display: inline-block;
+  text-align: center;
+}
 .aboutme__photo {
   grid-row-start: 1;
   grid-row-end: 3;
   grid-column-start: 2;
+}
+.aboutme__photo img {
+  max-width: 100%;
+}
+
+.myskills {
+  display: grid;
+}
+.myskills__item {
+  border: 2px dashed black;
+  width: 100px;
+  height: 100px;
 }
 
 .conteiner {

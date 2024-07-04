@@ -3,7 +3,6 @@
 body {
     min-height: 100vh;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    
 }
 
 .aboutme {
@@ -11,10 +10,44 @@ body {
     grid-template: 1fr 3fr / 1fr 1fr;
     gap: 10px;
     min-height: 70vh;
+    &__title {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & span {
+            display: inline-block;
+            text-transform: uppercase;
+        }
+    }
+    &__text {
+        font-size: 50px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & span {
+            display: inline-block;
+            text-align: center;
+        }
+    }
     &__photo {
         grid-row-start: 1;
         grid-row-end: 3;
         grid-column-start: 2;
+        & img {
+            max-width: 100%;
+        }
+    }
+
+}
+
+.myskills {
+    display: grid;
+    &__item {
+        border: 2px dashed black;
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -76,7 +109,6 @@ body {
 
 .myprojects {}
 
-.myskills {}
 
 .wrapper {
    
