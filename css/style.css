@@ -167,7 +167,8 @@ body.lock {
 }
 
 .conteiner {
-  max-width: 1200px;
+  max-width: 1240px;
+  padding: 0 20px;
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
@@ -187,7 +188,7 @@ body.lock {
   height: 70px;
   align-items: center;
   justify-content: space-around;
-  padding: 0 15px 0 15px;
+  padding: 0 20px 0 20px;
   position: fixed;
   top: 0;
   left: 0;
@@ -269,10 +270,14 @@ body.lock {
     top: -25px;
   }
   .aboutme {
-    grid-template: 1fr 3fr 4fr/1fr;
+    grid-template: 5vh 15vh 20vh 60vh/1fr;
+    /*&__photo {
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }*/
   }
   .aboutme__photo {
-    grid-row-start: 3;
+    grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 1;
   }
@@ -281,9 +286,13 @@ body.lock {
   }
   .aboutme__text {
     font-size: 35px;
+    grid-row-start: 3;
+    grid-row-end: 4;
   }
   .aboutme__title {
     font-size: 20px;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
   .header {
     justify-content: space-between;
@@ -372,5 +381,22 @@ body.lock {
   }
   .myskills__items {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  .content {
+    margin: 0;
+  }
+}
+@media (max-width: 334px) {
+  .aboutme__title {
+    font-size: 15px;
+  }
+  .aboutme__text {
+    font-size: 30px;
+  }
+  .myskills__items {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+  .header__menu {
+    font-size: 25px;
   }
 }/*# sourceMappingURL=style.css.map */

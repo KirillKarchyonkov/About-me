@@ -107,7 +107,8 @@ body.lock {
 .contacts {}
 
 .conteiner {
-    max-width: 1200px;
+    max-width: 1240px;
+    padding: 0 20px;
     margin: 0 auto;
     //border: 2px solid black;
     min-height: 100vh;
@@ -133,7 +134,7 @@ body.lock {
     //border: 2px solid black;
     align-items: center;
     justify-content: space-around;
-    padding: 0 15px 0 15px;
+    padding: 0 20px 0 20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -223,16 +224,18 @@ body.lock {
 /*.grid {
     border: 2px dashed black;
 }*/
-
+//0.5fr 1fr 3fr/1fr
 
 @media(max-width:690px) {
     .roof {
         top: -25px;
     }
     .aboutme {
-        grid-template: 1fr 3fr 4fr/ 1fr ;
+        //grid-template: 1fr 3fr 4fr/ 1fr ;
+        //grid-template: 10vh 20vh 70vh/ 1fr ;
+        grid-template: 5vh 15vh 20vh 60vh / 1fr;
         &__photo {
-            grid-row-start: 3;
+            grid-row-start: 4;
             grid-row-end: 5;
             grid-column-start: 1;
         }
@@ -241,10 +244,18 @@ body.lock {
         }
         &__text {
             font-size: 35px;
+            grid-row-start: 3;
+            grid-row-end: 4;
         }
         &__title {
             font-size: 20px;
+            grid-row-start: 2;
+            grid-row-end: 3;
         }
+        /*&__photo {
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }*/
     }
     .header {
         justify-content: space-between;
@@ -347,10 +358,33 @@ body.lock {
     .conteiner {
         //padding: 0 15px 0 15px;
     }
+    .content {
+        margin: 0;
+    }
     
 }
 
-@media(max-width:680px) {
+@media(max-width:334px) {
 
+    .aboutme {
+        &__title {
+            font-size: 15px;
+        }
+        &__text {
+            font-size: 30px;
+        
+        }
+    }
+    .myskills {
 
+        
+        &__items {
+            grid-template-columns: repeat(auto-fit, minmax(80px,1fr)); 
+        }
+    }
+    .header {
+        &__menu {
+            font-size: 25px;
+        }
+    }
 }
